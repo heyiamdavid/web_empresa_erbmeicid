@@ -25,3 +25,15 @@ document.addEventListener('click', function(event) {
         menuClose.style.display = 'none';
     }
 });
+document.addEventListener('scroll', () => {
+    const sections = document.querySelectorAll('.content');
+    sections.forEach(section => {
+        const rect = section.getBoundingClientRect();
+        const isVisible = rect.top < window.innerHeight && rect.bottom > 0;
+        if (isVisible) {
+            section.classList.add('visible');
+        } else {
+            section.classList.remove('visible');
+        }
+    });
+});
