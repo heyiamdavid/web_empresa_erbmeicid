@@ -88,3 +88,10 @@ window.addEventListener('scroll', () => {
 
     lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
 });
+
+window.addEventListener("load", () => {
+    const body = document.body;
+    setTimeout(() => {
+        body.classList.add("loaded");
+    }, 2800);
+});
