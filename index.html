@@ -3,31 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="ERBMEICID S.A ofrece dispositivos de rastreo satelital GPS para vehículos.">
+    <meta name="description" content="ERBMEICID S.A: dispositivos de rastreo satelital GPS para vehículos.">
     <meta name="keywords" content="rastreo satelital, GPS, vehículos, ERBMEICID">
+    <meta name="author" content="ERBMEICID S.A">
+    <meta property="og:title" content="ERBMEICID S.A: Rastreo GPS para Vehículos">
+    <meta property="og:description" content="Soluciones confiables para el rastreo satelital de vehículos.">
+    <meta property="og:image" content="assets/logo.png">
+    <meta property="og:url" content="https://erbmeicid.com">
     <title>ERBMEICID S.A</title>
     <link rel="icon" type="image/png" href="assets/logo.png">
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="preload" href="styles/style.css" as="style">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
 </head>
 <body>
-    <div id="carga">
+    <div id="carga" role="alert" aria-live="assertive">
         <p>ERBMEICID S.A</p>
     </div>
     <header>
         <div class="logo"><a href="index.html">ERBMEICID S.A</a></div>
-        <button class="menu-toggle" aria-label="Toggle menu">&#x22EE;</button>
-        <button class="menu-close" aria-label="Close menu">&times;</button>
+        <button class="menu-toggle" aria-label="Abrir menú">&#9776;</button>
         <nav class="menu" id="menu">
             <ul>
-                <li><a href="index.html">Inicio</a></li>
+                <li><a href="index.html" aria-current="page">Inicio</a></li>
                 <li><a href="pages/servicios.html">Servicios</a></li>
                 <li><a href="pages/equipo.html">Equipo</a></li>
                 <li><a href="pages/contactanos.html">Contáctanos</a></li>
             </ul>
         </nav>
     </header>
-
     <main>
         <section class="hero">
             <h1>Servicio de Dispositivo de Rastreo Satelital</h1>
@@ -37,67 +41,38 @@
                 <a href="pages/agendar.html" class="btn btn-secondary">Agendar</a>
             </div>
         </section>
-
-        <!-- Información adicional con efecto scroll -->
-        <section class="content hidden">Información de la izquierda</section>
-        <section class="content hidden">Información de la derecha</section>
-
-        <section class="content hidden">
-            <ul>
-                <center><h1>Preguntas frecuentes</h1></center>
-                <h2>¿Qué medidas deben tomarse en caso de un robo si el dispositivo de rastreo está instalado?</h2>
-                <p>Respuesta</p>
-                <h2>¿Qué sucede si el dispositivo de rastreo pierde la señal?</h2>
-                <p>Respuesta</p>
-                <h2>¿Por cuánto tiempo el dispositivo de rastreo puede almacenar las ubicaciones registradas?</h2>
-                <p>Respuesta</p>
-            </ul>
-        </section>
-
-        <section class="content hidden">
-            <ul>
-                <h2>¿El dispositivo de rastreo cuenta con funciones adicionales, como alertas en tiempo real?</h2>
-                <p>Respuesta</p>
-                <h2>¿Cada cuánto tiempo se debe renovar el equipo de rastreo?</h2>
-                <p>Respuesta</p>
-                <h2>¿Cuáles son los costos asociados al mantenimiento del dispositivo de rastreo?</h2>
-                <p>Respuesta</p>
-            </ul>
+        <section class="faq">
+           <center><h2>Preguntas Frecuentes</h2></center>
+            <details>
+                <summary>¿Qué medidas tomar en caso de un robo?</summary>
+                <p>Contacte con la policía y utilice el rastreador para informar la ubicación.</p>
+            </details>
+            <details>
+                <summary>¿Qué sucede si el dispositivo pierde señal?</summary>
+                <p>El dispositivo almacena datos localmente hasta que recupere señal.</p>
+            </details>
+            <details>
+                <summary>¿El dispositivo de rastreo cuenta con funciones adicionales, como alertas en tiempo real?</summary>
+                <p>Sí, el dispositivo incluye múltiples funciones adicionales, como alertas en tiempo real para notificar movimientos no autorizados, salida de perímetros establecidos (geocercas), exceso de velocidad, cortes de batería y más. Estas notificaciones se envían directamente a tu dispositivo móvil o correo electrónico.</p>
+            </details>
+            <details>
+                <summary>¿Cada cuánto tiempo se debe renovar el equipo de rastreo?</summary>
+                <p>Nuestros dispositivos de rastreo están diseñados para tener una vida útil prolongada de entre 2 y 3 años. Sin embargo, recomendamos revisiones técnicas cada 12 meses para garantizar su correcto funcionamiento. La renovación del equipo solo es necesaria si hay un desgaste significativo o si deseas actualizarte a modelos más avanzados.</p>
+            </details>
+            <details>
+                <summary>¿Cuáles son los costos asociados al mantenimiento del dispositivo de rastreo?
+                </summary>
+                <p>El mantenimiento regular incluye revisiones técnicas para verificar el correcto funcionamiento del dispositivo y actualizaciones de software. Estos costos son mínimos y se calculan según el plan de servicio contratado. Contamos con opciones asequibles para garantizar que tu dispositivo esté siempre en óptimas condiciones.</p>
+            </details>
+            <details>
+                <summary>¿Por cuánto tiempo el dispositivo de rastreo puede almacenar las ubicaciones registradas?</summary>
+                <p>El dispositivo de rastreo puede almacenar las ubicaciones registradas hasta por 90 días en nuestra plataforma. En caso de que necesites un almacenamiento más prolongado, podemos ofrecer soluciones personalizadas según tus necesidades.</p>
+            </details>
         </section>
     </main>
-
     <footer>
-        <div class="footer-section">
-            <h3>ERBMEICID S.A</h3>
-            <p>Tu solución confiable en dispositivos de rastreo satelital.</p>
-        </div>
-        <div class="footer-section">
-            <h3>Info</h3>
-            <ul>
-                <li><a href="pages/about.html">Sobre Nosotros</a></li>
-                <li><a href="pages/services.html">Servicios</a></li>
-                <li><a href="pages/team.html">Equipo</a></li>
-                <li><a href="pages/contact.html">Contacto</a></li>
-            </ul>
-        </div>
-        <div class="footer-section">
-            <h3>Catálogo</h3>
-            <ul>
-                <li><a href="#">Air Intakes</a></li>
-                <li><a href="#">Body Kits</a></li>
-                <li><a href="#">Brake Systems</a></li>
-                <li><a href="#">Car Seats</a></li>
-            </ul>
-        </div>
-        <div class="social-icons">
-            <h3>Redes Sociales</h3>
-            <a href="https://www.facebook.com/credito.directo.erbmeicid" target="_blank"><i class="fab fa-facebook"></i></a>
-            <a href="https://wa.me/+593960928148" target="_blank"><i class="fab fa-whatsapp"></i></a>
-            <a href="https://www.instagram.com/erbmeicidgps/" target="_blank"><i class="fab fa-instagram"></i></a>
-        </div>
+        <p>&copy; 2024 ERBMEICID S.A - Todos los derechos reservados.</p>
     </footer>
-
-    <div class="copyright">&copy; 2024 ERBMEICID S.A</div>
     <script src="scripts/script.js"></script>
 </body>
 </html>
