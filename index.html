@@ -25,10 +25,10 @@
         <button class="menu-toggle" aria-label="Abrir menú">&#9776;</button>
         <nav class="menu" id="menu">
             <ul>
-                <li><a href="index.html" aria-current="page">Inicio</a></li>
                 <li><a href="pages/servicios.html">Servicios</a></li>
                 <li><a href="pages/equipo.html">Equipo</a></li>
                 <li><a href="pages/contactanos.html">Contáctanos</a></li>
+                <li><a href="pages/sobre_nosotros.html">Sobre nosotros</a></li>
             </ul>
         </nav>
     </header>
@@ -41,6 +41,46 @@
                 <a href="pages/agendar.html" class="btn btn-secondary">Agendar</a>
             </div>
         </section>
+
+        <section class="Beneficios_uso">
+            <div class="beneficios">
+                <h1>Beneficios</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem velit similique voluptate excepturi minima hic asperiores nostrum nemo recusandae in eum libero consectetur, impedit quia dolor sit sed temporibus. Cumque!</p>
+                <ul class="lista_beneficios">
+                    <li>Facilidad de uso y configuración.</li>
+                    <li>Soporte técnico confiable.</li>
+                    <li>Seguridad y privacidad garantizada.</li>
+                    <li>Precios competitivos y flexibles.</li>
+                    <li>Algo más, ya no se me ocurrió nada.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="Planes_y_precios">
+            <h1>Planes</h1>
+            <div class="planes">
+                <div class="plan" onclick="togglePlan(this)">
+                    <h2>Plan 1</h2>
+                    <p class="info-corta">Ideal para motos.</p>
+                    <div class="precio"><p>$50</p></div>
+                    <p class="info-completa">Este plan incluye monitoreo en tiempo real, alertas de movimiento, y geocercas. Soporte 24/7 y actualizaciones automáticas.</p>
+                </div>
+                <div class="plan" onclick="togglePlan(this)">
+                    <h2>Plan 2</h2>
+                    <p class="info-corta">Perfecto para automóviles.</p>
+                    <div class="precio"><p>$100</p></div>
+                    <p class="info-completa">Además de las funciones del Plan 1, este incluye seguimiento histórico de rutas por 90 días, bloqueo remoto del motor, y alertas de velocidad.</p>
+                </div>
+                <div class="plan" onclick="togglePlan(this)">
+                    <h2>Plan 3</h2>
+                    <p class="info-corta">Recomendado para flotas.</p>
+                    <div class="precio"><p>$200</p></div>
+                    <p class="info-completa">Este plan avanzado incluye todas las funciones de los planes anteriores más reportes personalizados, múltiples usuarios, y analíticas avanzadas.</p>
+                </div>
+            </div>
+        </section>
+        
+
         <section class="faq">
            <center><h2>Preguntas Frecuentes</h2></center>
             <details>
@@ -70,9 +110,46 @@
             </details>
         </section>
     </main>
-    <footer>
-        <p>&copy; 2024 ERBMEICID S.A - Todos los derechos reservados.</p>
-    </footer>
+
     <script src="scripts/script.js"></script>
 </body>
+<footer>
+    <div class="footer-section">
+        <h3>ERBMEICID S.A</h3>
+        <p>Tu solución confiable en dispositivos de rastreo satelital.</p>
+    </div>
+
+    <div class="footer-section">
+        <h3>Info</h3>
+        <ul>
+            <li><a href="pages/sobre_nosotros.html">Sobre Nosotros</a></li>
+            <li><a href="pages/servicios.html">Servicios</a></li>
+            <li><a href="pages/equipo.html">Equipo</a></li>
+            <li><a href="pages/contactanos.htmls">Contacto</a></li>
+        </ul>
+    </div>
+   
+    <div class="footer-section">
+        <h3>Catálogo</h3>
+        <ul>
+            <li><a href="#">Air Intakes</a></li>
+            <li><a href="#">Body Kits</a></li>
+            <li><a href="#">Brake Systems</a></li>
+            <li><a href="#">Car Seats</a></li>
+        </ul>
+        
+    </div>
+
+    <div class="social-icons">
+        <h3>Redes Sociales</h3>
+        <a href="https://www.facebook.com/credito.directo.erbmeicid" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="https://wa.me/+593960928148" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://www.instagram.com/erbmeicidgps/" target="_blank"><i class="fab fa-instagram"></i></a>
+    </div>
+</footer>
+
+<div class="copyright">
+    &copy; 2024 ERBMEICID S.A
+</div>
+
 </html>

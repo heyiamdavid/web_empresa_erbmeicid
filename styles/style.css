@@ -193,6 +193,86 @@ nav ul li a:hover {
     }
 }
 
+.beneficios {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #333;
+    color: white;
+}
+
+.beneficios h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.beneficios p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    color: #ccc;
+}
+
+.lista_beneficios {
+    list-style-type: none;
+    padding: 0;
+}
+
+.lista_beneficios li {
+    font-size: 1.1em;
+    margin-bottom: 15px;
+    color: #eee;
+    padding: 10px 0;
+    border-bottom: 1px solid #444;
+}
+
+.lista-beneficios li:last-child {
+    border-bottom: none;
+}
+
+.Planes_y_precios {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #222;
+    color: white;
+}
+
+.Planes_y_precios h1 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+}
+
+.planes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.plan {
+    max-width: 400px;
+    text-align: center;
+    background-color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.plan:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7);
+}
+
+.plan h2 {
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+.plan p {
+    font-size: 1em;
+    color: #ccc;
+}
+
 footer {
     background-color: #222;
     color: #fff;
@@ -226,6 +306,7 @@ footer {
     text-align: center;
     margin-top: 20px;
     font-size: 0.8em;
+    margin-bottom: 15px;
 }
 
 .social-icons a {
@@ -596,6 +677,7 @@ body.loaded #content {
     font-size: 1em;
     color: #ccc;
 }
+
 .servicios {
     text-align: center;
     padding: 50px 20px;
@@ -710,4 +792,117 @@ body.loaded #content {
         font-size: 0.9em;
         padding: 8px 15px;
     }
+}
+
+.sobre-nosotros {
+    padding: 50px 20px;
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+}
+
+.sobre-nosotros h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #f00;
+}
+
+.sobre-nosotros p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    line-height: 1.6;
+    color: #ccc;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.sobre-nosotros img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+}
+
+.sobre-nosotros .team {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.sobre-nosotros .team-member {
+    text-align: center;
+    max-width: 200px;
+    flex: 1;
+    margin: 0 auto;
+}
+
+.sobre-nosotros .team-member img {
+    border-radius: 50%;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sobre-nosotros .team-member img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+.sobre-nosotros .team-member h3 {
+    font-size: 1.2em;
+    color: #fff;
+}
+
+.sobre-nosotros .team-member p {
+    font-size: 0.9em;
+    color: #ccc;
+}
+
+@media (max-width: 768px) {
+    .sobre-nosotros {
+        padding: 30px 10px;
+    }
+
+    .sobre-nosotros p {
+        font-size: 1em;
+    }
+
+    .sobre-nosotros .team {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Estilo base para los planes */
+.plan {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    height: 150px; /* Altura inicial */
+    position: relative;
+}
+
+.plan h2, .plan .precio, .plan .info-corta {
+    margin: 10px 0;
+}
+
+.plan .info-completa {
+    display: none; /* Oculto por defecto */
+    margin-top: 10px;
+}
+
+.plan.expandido {
+    height: auto; /* Ajusta la altura automáticamente */
+    background-color: #f9f9f9;
+}
+
+.plan.expandido .info-completa {
+    display: block; /* Muestra la información completa */
 }

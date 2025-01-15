@@ -95,3 +95,7 @@ window.addEventListener("load", () => {
         body.classList.add("loaded");
     }, 2800);
 });
+
+function togglePlan(planElement) {
+        planElement.classList.toggle('expandido');
+}
