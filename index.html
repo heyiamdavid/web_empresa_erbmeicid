@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,6 +17,7 @@
     <link rel="preload" href="styles/style.css" as="style">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
 </head>
+
 <body>
     <div id="carga" role="alert" aria-live="assertive">
         <p>ERBMEICID S.A</p>
@@ -26,12 +28,12 @@
         <nav class="menu" id="menu">
             <ul>
                 <li><a href="pages/servicios.html">Servicios</a></li>
-                <li><a href="pages/equipo.html">Equipo</a></li>
                 <li><a href="pages/contactanos.html">Contáctanos</a></li>
                 <li><a href="pages/sobre_nosotros.html">Sobre nosotros</a></li>
             </ul>
         </nav>
     </header>
+    
     <main>
         <section class="hero">
             <h1>Servicio de Dispositivo de Rastreo Satelital</h1>
@@ -45,7 +47,9 @@
         <section class="Beneficios_uso">
             <div class="beneficios">
                 <h1>Beneficios</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem velit similique voluptate excepturi minima hic asperiores nostrum nemo recusandae in eum libero consectetur, impedit quia dolor sit sed temporibus. Cumque!</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem velit similique voluptate
+                    excepturi minima hic asperiores nostrum nemo recusandae in eum libero consectetur, impedit quia
+                    dolor sit sed temporibus. Cumque!</p>
                 <ul class="lista_beneficios">
                     <li>Facilidad de uso y configuración.</li>
                     <li>Soporte técnico confiable.</li>
@@ -56,59 +60,111 @@
             </div>
         </section>
 
-        <section class="Planes_y_precios">
-            <h1>Planes</h1>
-            <div class="planes">
-                <div class="plan" onclick="togglePlan(this)">
-                    <h2>Plan 1</h2>
-                    <p class="info-corta">Ideal para motos.</p>
-                    <div class="precio"><p>$50</p></div>
-                    <p class="info-completa">Este plan incluye monitoreo en tiempo real, alertas de movimiento, y geocercas. Soporte 24/7 y actualizaciones automáticas.</p>
+        <section class="nuestra_empresa">
+            <div class="empresa-contenedor">
+                <div class="empresa-imagen-izquierda">
+                    <img src="/assets/gps.jpg" alt="GPS">
                 </div>
-                <div class="plan" onclick="togglePlan(this)">
-                    <h2>Plan 2</h2>
-                    <p class="info-corta">Perfecto para automóviles.</p>
-                    <div class="precio"><p>$100</p></div>
-                    <p class="info-completa">Además de las funciones del Plan 1, este incluye seguimiento histórico de rutas por 90 días, bloqueo remoto del motor, y alertas de velocidad.</p>
-                </div>
-                <div class="plan" onclick="togglePlan(this)">
-                    <h2>Plan 3</h2>
-                    <p class="info-corta">Recomendado para flotas.</p>
-                    <div class="precio"><p>$200</p></div>
-                    <p class="info-completa">Este plan avanzado incluye todas las funciones de los planes anteriores más reportes personalizados, múltiples usuarios, y analíticas avanzadas.</p>
+
+                <div class="empresa-contenido-derecha">
+                    <div class="empresa-texto">
+                        <h2>Nuestra Empresa</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam ratione cum qui eum
+                            laudantium voluptates culpa ab mollitia consectetur ea voluptatem nulla perspiciatis animi,
+                            blanditiis fugit maiores placeat dolor distinctio.</p>
+                    </div>
+
+                    <div class="empresa-imagen-derecha">
+                        <img src="/assets/interior_carro.jpg" alt="Interior de un coche">
+                    </div>
                 </div>
             </div>
         </section>
-        
 
-        <section class="faq">
-           <center><h2>Preguntas Frecuentes</h2></center>
-            <details>
-                <summary>¿Qué medidas tomar en caso de un robo?</summary>
-                <p>Contacte con la policía y utilice el rastreador para informar la ubicación.</p>
-            </details>
-            <details>
-                <summary>¿Qué sucede si el dispositivo pierde señal?</summary>
-                <p>El dispositivo almacena datos localmente hasta que recupere señal.</p>
-            </details>
-            <details>
-                <summary>¿El dispositivo de rastreo cuenta con funciones adicionales, como alertas en tiempo real?</summary>
-                <p>Sí, el dispositivo incluye múltiples funciones adicionales, como alertas en tiempo real para notificar movimientos no autorizados, salida de perímetros establecidos (geocercas), exceso de velocidad, cortes de batería y más. Estas notificaciones se envían directamente a tu dispositivo móvil o correo electrónico.</p>
-            </details>
-            <details>
-                <summary>¿Cada cuánto tiempo se debe renovar el equipo de rastreo?</summary>
-                <p>Nuestros dispositivos de rastreo están diseñados para tener una vida útil prolongada de entre 2 y 3 años. Sin embargo, recomendamos revisiones técnicas cada 12 meses para garantizar su correcto funcionamiento. La renovación del equipo solo es necesaria si hay un desgaste significativo o si deseas actualizarte a modelos más avanzados.</p>
-            </details>
-            <details>
-                <summary>¿Cuáles son los costos asociados al mantenimiento del dispositivo de rastreo?
-                </summary>
-                <p>El mantenimiento regular incluye revisiones técnicas para verificar el correcto funcionamiento del dispositivo y actualizaciones de software. Estos costos son mínimos y se calculan según el plan de servicio contratado. Contamos con opciones asequibles para garantizar que tu dispositivo esté siempre en óptimas condiciones.</p>
-            </details>
-            <details>
-                <summary>¿Por cuánto tiempo el dispositivo de rastreo puede almacenar las ubicaciones registradas?</summary>
-                <p>El dispositivo de rastreo puede almacenar las ubicaciones registradas hasta por 90 días en nuestra plataforma. En caso de que necesites un almacenamiento más prolongado, podemos ofrecer soluciones personalizadas según tus necesidades.</p>
-            </details>
-        </section>
+            <section class="Planes_y_precios">
+                <h1>Planes</h1>
+                <div class="planes">
+                    <div class="plan" onclick="togglePlan(this)">
+                        <h2>Plan 1</h2>
+                        <p class="info-corta">Ideal para motos.</p>
+                        <div class="precio">
+                            <p>$50</p>
+                        </div>
+                        <p class="info-completa">Este plan incluye monitoreo en tiempo real, alertas de movimiento, y
+                            geocercas. Soporte 24/7 y actualizaciones automáticas.</p>
+                    </div>
+                    <div class="plan" onclick="togglePlan(this)">
+                        <h2>Plan 2</h2>
+                        <p class="info-corta">Perfecto para automóviles.</p>
+                        <div class="precio">
+                            <p>$100</p>
+                        </div>
+                        <p class="info-completa">Además de las funciones del Plan 1, este incluye seguimiento histórico
+                            de
+                            rutas por 90 días, bloqueo remoto del motor, y alertas de velocidad.</p>
+                    </div>
+                    <div class="plan" onclick="togglePlan(this)">
+                        <h2>Plan 3</h2>
+                        <p class="info-corta">Recomendado para flotas.</p>
+                        <div class="precio">
+                            <p>$200</p>
+                        </div>
+                        <p class="info-completa">Este plan avanzado incluye todas las funciones de los planes anteriores
+                            más
+                            reportes personalizados, múltiples usuarios, y analíticas avanzadas.</p>
+                    </div>
+                </div>
+            </section>
+
+
+            <section class="faq">
+                <center>
+                    <h2>Preguntas Frecuentes</h2>
+                </center>
+                <details>
+                    <summary>¿Qué medidas tomar en caso de un robo?</summary>
+                    <p>Contacte con la policía y utilice el rastreador para informar la ubicación.</p>
+                </details>
+                <details>
+                    <summary>¿Qué sucede si el dispositivo pierde señal?</summary>
+                    <p>El dispositivo almacena datos localmente hasta que recupere señal.</p>
+                </details>
+                <details>
+                    <summary>¿El dispositivo de rastreo cuenta con funciones adicionales, como alertas en tiempo real?
+                    </summary>
+                    <p>Sí, el dispositivo incluye múltiples funciones adicionales, como alertas en tiempo real para
+                        notificar movimientos no autorizados, salida de perímetros establecidos (geocercas), exceso de
+                        velocidad, cortes de batería y más. Estas notificaciones se envían directamente a tu dispositivo
+                        móvil o correo electrónico.</p>
+                </details>
+                <details>
+                    <summary>¿Cada cuánto tiempo se debe renovar el equipo de rastreo?</summary>
+                    <p>Nuestros dispositivos de rastreo están diseñados para tener una vida útil prolongada de entre 2 y
+                        3
+                        años. Sin embargo, recomendamos revisiones técnicas cada 12 meses para garantizar su correcto
+                        funcionamiento. La renovación del equipo solo es necesaria si hay un desgaste significativo o si
+                        deseas actualizarte a modelos más avanzados.</p>
+                </details>
+                <details>
+                    <summary>¿Cuáles son los costos asociados al mantenimiento del dispositivo de rastreo?
+                    </summary>
+                    <p>El mantenimiento regular incluye revisiones técnicas para verificar el correcto funcionamiento
+                        del
+                        dispositivo y actualizaciones de software. Estos costos son mínimos y se calculan según el plan
+                        de
+                        servicio contratado. Contamos con opciones asequibles para garantizar que tu dispositivo esté
+                        siempre en óptimas condiciones.</p>
+                </details>
+                <details>
+                    <summary>¿Por cuánto tiempo el dispositivo de rastreo puede almacenar las ubicaciones registradas?
+                    </summary>
+                    <p>El dispositivo de rastreo puede almacenar las ubicaciones registradas hasta por 90 días en
+                        nuestra
+                        plataforma. En caso de que necesites un almacenamiento más prolongado, podemos ofrecer
+                        soluciones
+                        personalizadas según tus necesidades.</p>
+                </details>
+            </section>
     </main>
 
     <script src="scripts/script.js"></script>
@@ -124,20 +180,8 @@
         <ul>
             <li><a href="pages/sobre_nosotros.html">Sobre Nosotros</a></li>
             <li><a href="pages/servicios.html">Servicios</a></li>
-            <li><a href="pages/equipo.html">Equipo</a></li>
-            <li><a href="pages/contactanos.htmls">Contacto</a></li>
+            <li><a href="pages/contactanos.htmls">Contáctanos</a></li>
         </ul>
-    </div>
-   
-    <div class="footer-section">
-        <h3>Catálogo</h3>
-        <ul>
-            <li><a href="#">Air Intakes</a></li>
-            <li><a href="#">Body Kits</a></li>
-            <li><a href="#">Brake Systems</a></li>
-            <li><a href="#">Car Seats</a></li>
-        </ul>
-        
     </div>
 
     <div class="social-icons">

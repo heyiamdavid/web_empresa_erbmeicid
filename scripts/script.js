@@ -97,5 +97,24 @@ window.addEventListener("load", () => {
 });
 
 function togglePlan(planElement) {
+        if (window.innerWidth > 768) {
         planElement.classList.toggle('expandido');
+    }
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+    const empresaSeccion = document.querySelector(".nuestra_empresa");
+
+    function verificarVisibilidad() {
+        const rect = empresaSeccion.getBoundingClientRect();
+        const alturaVentana = window.innerHeight;
+
+        if (rect.top < alturaVentana * 0.75 && rect.bottom >= 0) {
+            empresaSeccion.classList.add("empresa-visible");
+            window.removeEventListener("scroll", verificarVisibilidad);
+        }
+    }
+
+    window.addEventListener("scroll", verificarVisibilidad);
+    verificarVisibilidad();
+});
