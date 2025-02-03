@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ERBMEICID S.A</title>
+    <link rel="icon" type="image/png" href="../assets/logo.png">
+    <link rel="stylesheet" href="../styles/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="logo"><a href="../index.html">ERBMEICID S.A</a></div>
+        <button class="menu-toggle" aria-label="Toggle menu">&#x22EE;</button>
+        <button class="menu-close" aria-label="Close menu">&times;</button>
+        <nav class="menu" id="menu">
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="../pages/sobre_nosotros.html">Sobre Nosotros</a></li>
+                <li><a href="../pages/contactanos.html">Contáctanos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <body>
+
+        <div>
+            <center><h1>Planes</h1></center>
+            <center>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque sequi rerum necessitatibus quis
+                    eveniet odit id aspernatur magnam reiciendis dolorum unde qui dignissimos esse itaque accusamus,
+                    cumque consectetur. Aliquam, dicta.</p>
+            </center>
+        </div>
+
+        <div class="rastreo-seccion-principal">
+            
+            <div class="rastreo-lista-planes">
+                <div class="rastreo-tarjeta-plan" onclick="mostrarDetalles(1)">
+                    <img src="/assets/moto.jpg" alt="Plan 1">
+                    <h2>Plan 1</h2>
+                    <p>Ideal para motos.</p>
+                    <p class="rastreo-precio">$50</p>
+                    <button>Ver más</button>
+                </div>
+
+                <div class="rastreo-tarjeta-plan" onclick="mostrarDetalles(2)">
+                    <img src="/assets/carro.jpeg" alt="Plan 2">
+                    <h2>Plan 2</h2>
+                    <p>Perfecto para automóviles.</p>
+                    <p class="rastreo-precio">$100</p>
+                    <button>Ver más</button>
+                </div>
+
+                <div class="rastreo-tarjeta-plan" onclick="mostrarDetalles(3)">
+                    <img src="/assets/camiones.jpg" alt="Plan 3">
+                    <h2>Plan 3</h2>
+                    <p>Recomendado para camiones.</p>
+                    <p class="rastreo-precio">$200</p>
+                    <button>Ver más</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="rastreo-ventana-detalles" class="rastreo-ventana">
+            <div class="rastreo-contenido-ventana">
+                <span class="rastreo-cerrar" onclick="cerrarDetalles()">&times;</span>
+                <h2 id="rastreo-titulo-ventana"></h2>
+                <img id="rastreo-imagen-ventana" src="" alt="">
+                <p id="rastreo-descripcion-ventana"></p>
+            </div>
+        </div>
+    </body>
+
+    <footer>
+        <div class="footer-section">
+            <h3>ERBMEICID S.A</h3>
+            <p>Tu solución confiable en dispositivos de rastreo satelital.</p>
+        </div>
+
+        <div class="footer-section">
+            <h3>Info</h3>
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="../pages/sobre_nosotros.html">Sobre Nosotros</a></li>
+                <li><a href="../pages/contactanos.htmls">Contáctanos</a></li>
+            </ul>
+        </div>
+
+        </div>
+
+        <div class="social-icons">
+            <h3>Redes Sociales</h3>
+            <a href="https://www.facebook.com/credito.directo.erbmeicid" target="_blank"><i
+                    class="fab fa-facebook"></i></a>
+            <a href="https://wa.me/+593960928148" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://www.instagram.com/erbmeicidgps/" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+    </footer>
+
+    <div class="copyright">
+        &copy; 2024 ERBMEICID S.A
+    </div>
+
+    <script src="../scripts/script.js"></script>
