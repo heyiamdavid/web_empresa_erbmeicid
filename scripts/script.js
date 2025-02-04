@@ -163,17 +163,17 @@ const datosPlanes = {
     1: {
       titulo: "Plan 1 - Motos",
       imagen: "../assets/moto.jpg",
-      descripcion: "Este plan incluye monitoreo en tiempo real, alertas de movimiento y geocercas. Soporte 24/7 y actualizaciones automáticas. Ideal para quienes desean seguridad y rastreo en su moto."
+      descripcion: "Nuestro Plan 1 es la opción perfecta para quienes buscan una solución sencilla y confiable para el seguimiento de su vehículo. Con este plan, tendrás acceso a un sistema intuitivo que te permite conocer la ubicación de tu automóvil en tiempo real, ofreciéndote una visión clara y directa de su situación."
     },
     2: {
       titulo: "Plan 2 - Automóviles",
       imagen: "../assets/carro.jpeg",
-      descripcion: "Incluye todas las funciones del Plan 1 más seguimiento histórico de rutas por 90 días, bloqueo remoto del motor y alertas de velocidad. Perfecto para mayor control de tu auto."
+      descripcion: "El Plan 2 está diseñado para quienes requieren un control más detallado y funcionalidades adicionales que van más allá del monitoreo básico. Este plan te ofrece herramientas mejoradas que facilitan la visualización y el análisis del comportamiento de tu vehículo, permitiéndote tomar decisiones informadas. También podrás disfrutar de alertas personalizadas y reportes que te ayudarán a optimizar la seguridad y el rendimiento."
     },
     3: {
       titulo: "Plan 3 - Flotas",
       imagen: "../assets/camiones.jpg",
-      descripcion: "El plan avanzado para gestión de flotas. Incluye todo lo anterior más reportes personalizados, múltiples usuarios y analíticas avanzadas para optimizar el control vehicular."
+      descripcion: "El Plan 3 es la solución avanzada pensada para la gestión de flotas o para usuarios con requerimientos de seguridad y control más sofisticados. Con este plan, podrás gestionar múltiples vehículos de manera centralizada, beneficiándote de herramientas de análisis y seguimiento que facilitan la toma de decisiones estratégicas."
     }
   };
 
