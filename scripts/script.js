@@ -161,31 +161,103 @@ document.addEventListener("DOMContentLoaded", function () {
 
 const datosPlanes = {
     1: {
-      titulo: "Plan 1 - Motos",
-      imagen: "../assets/moto.jpg",
-      descripcion: "Nuestro Plan 1 es la opción perfecta para quienes buscan una solución sencilla y confiable para el seguimiento de su vehículo. Con este plan, tendrás acceso a un sistema intuitivo que te permite conocer la ubicación de tu automóvil en tiempo real, ofreciéndote una visión clara y directa de su situación."
+        titulo: "Anual PLUS",
+        imagen: "../assets/moto.jpg",
+        descripcion: `
+            Rastreo Vehicular Satelital un solo pago de $99.00 más impuestos ya instalado.<br>
+            Equipos Homologados por la <strong>Arcotel</strong>.<br><br>
+            Servicio técnico en caso de requerir.<br>
+            2 años de garantía.<br><br>
+            <strong>Funciones:</strong>
+            <ul>
+                <li>Ubicación, paradas, tiempos, distancias recorridas en tiempo real (ARCHIVO video, Excel o PDF).</li>
+                <li>Apertura de puertas (adicional - opcional).</li>
+                <li>Bloqueo del motor.</li>
+                <li>Alertas perímetro asignado.</li>
+                <li>Corte de batería.</li>
+                <li>Encendido y apagado de motor.</li>
+                <li>Exceso de velocidad.</li>
+                <li>Plataforma para Android, iOS y PC.</li>
+            </ul>
+            Dispositivo y plataforma americana
+        `
     },
     2: {
-      titulo: "Plan 2 - Automóviles",
-      imagen: "../assets/carro.jpeg",
-      descripcion: "El Plan 2 está diseñado para quienes requieren un control más detallado y funcionalidades adicionales que van más allá del monitoreo básico. Este plan te ofrece herramientas mejoradas que facilitan la visualización y el análisis del comportamiento de tu vehículo, permitiéndote tomar decisiones informadas. También podrás disfrutar de alertas personalizadas y reportes que te ayudarán a optimizar la seguridad y el rendimiento."
+        titulo: "Anual SILVER",
+        imagen: "../assets/carro.jpeg",
+        descripcion: `
+            Rastreo Vehicular Satelital un solo pago de $139.00 más impuestos ya instalado.<br>
+            Equipos Homologados por la <strong>Arcotel</strong>.<br><br>
+            Servicio técnico en caso de requerir.<br>
+            2 años de garantía.<br><br>
+            <strong>Funciones:</strong>
+            <ul>
+                <li>Ubicación, paradas, tiempos, distancias recorridas en tiempo real (ARCHIVO video, Excel o PDF).</li>
+                <li>Botón SOS al pulsarlo envía alertas.</li>
+                <li>Micrófono espía, podrá oír dentro de la cabina.</li>
+                <li>Apertura de puertas (desde la app - emergencias).</li>
+                <li>Bloqueo del motor.</li>
+                <li>Alertas perímetro asignado.</li>
+                <li>Corte de batería.</li>
+                <li>Encendido y apagado de motor.</li>
+                <li>Exceso de velocidad.</li>
+                <li>Plataforma para Android, iOS y PC.</li>
+            </ul>
+            Dispositivo y plataforma americana
+            `
     },
     3: {
-      titulo: "Plan 3 - Flotas",
-      imagen: "../assets/camiones.jpg",
-      descripcion: "El Plan 3 es la solución avanzada pensada para la gestión de flotas o para usuarios con requerimientos de seguridad y control más sofisticados. Con este plan, podrás gestionar múltiples vehículos de manera centralizada, beneficiándote de herramientas de análisis y seguimiento que facilitan la toma de decisiones estratégicas."
+        titulo: "Anual PREMIUM INTERNACIONAL",
+        imagen: "../assets/camiones.jpg",
+        descripcion: `
+        Rastreo Vehicular Satelital un solo pago de $179.00 más impuestos ya instalado, megas disponibles con SIM CARD INTERNACIONAL.<br>
+        Equipos Homologados por la <strong>Arcotel</strong>.<br><br>
+        Servicio técnico en caso de requerir.<br>
+        2 años de garantía.<br><br>
+        <strong>Funciones:</strong>
+        <ul>
+            <li>Ubicación, paradas, tiempos, distancias recorridas en tiempo real (ARCHIVO video, Excel o PDF).</li>
+            <li>Botón SOS al pulsarlo envía alertas.</li>
+            <li>Apertura de puertas (desde la app - emergencias).</li>
+            <li>Bloqueo del motor.</li>
+            <li>Alertas perímetro asignado.</li>
+            <li>Corte de batería.</li>
+            <li>Encendido y apagado de motor.</li>
+            <li>Exceso de velocidad.</li>
+            <li>Plataforma para Android, iOS y PC.</li>
+        </ul>
+        <strong>COBERTURA:</strong>
+        <ul>
+            <li>Ecuador</li>
+            <li>Colombia</li>
+            <li>Perú</li>
+        </ul>
+        `
     }
-  };
+};
 
-  function mostrarDetalles(idPlan) {
-    console.log("Se llamó a mostrarDetalles para el plan:", idPlan);
-    document.getElementById("rastreo-titulo-ventana").innerText = datosPlanes[idPlan].titulo;
-    document.getElementById("rastreo-imagen-ventana").src = datosPlanes[idPlan].imagen;
-    document.getElementById("rastreo-descripcion-ventana").innerText = datosPlanes[idPlan].descripcion;
-    document.getElementById("rastreo-ventana-detalles").style.display = "block";
-  }
+function mostrarDetalles(idPlan) {
+    if (datosPlanes[idPlan]) {
+        document.getElementById("rastreo-titulo-ventana").innerText = datosPlanes[idPlan].titulo;
+        document.getElementById("rastreo-imagen-ventana").src = datosPlanes[idPlan].imagen;
+        document.getElementById("rastreo-descripcion-ventana").innerHTML = datosPlanes[idPlan].descripcion;
+        document.getElementById("rastreo-ventana-detalles").style.display = "flex";
+    }
+}
 
-  function cerrarDetalles() {
+function cerrarDetalles() {
     document.getElementById("rastreo-ventana-detalles").style.display = "none";
-  }
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+    document.getElementById("rastreo-ventana-detalles").style.display = "none";
+});
+
   
+  document.querySelectorAll('.faq details').forEach(function(detail) {
+    detail.addEventListener('click', function(e) {
+      if (e.target.tagName.toLowerCase() !== 'summary') {
+        detail.open = !detail.open;
+      }
+    });
+});
