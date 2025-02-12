@@ -223,10 +223,22 @@ nav ul li a:hover {
     color: #eee;
     padding: 10px 0;
     border-bottom: 1px solid #444;
+    opacity: 0;
+    transform: translateY(-30px);
+    transition: opacity 2s ease-out, transform 1s ease-out;
 }
 
-.lista-beneficios li:last-child {
-    border-bottom: none;
+.lista_beneficios li.aparece {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+    .lista_beneficios li {
+        opacity: 1 !important;
+        transform: translateY(0) !important;
+        transition: none !important;
+    }
 }
 
 .Planes_y_precios {
@@ -249,13 +261,28 @@ nav ul li a:hover {
 }
 
 .plan {
+    flex: 1 1 calc(33.333% - 40px);
     max-width: 400px;
     text-align: center;
-    background-color: #333;
+    background-color: #232323;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    overflow: hidden;
+    height: auto;
+    position: relative;
+}
+
+.plan h2, .plan .precio, .plan .info-corta {
+    margin: 10px 0;
+}
+
+.plan .info-completa {
+    display: none;
+    margin-top: 10px;
 }
 
 .plan:hover {
@@ -263,14 +290,40 @@ nav ul li a:hover {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7);
 }
 
-.plan h2 {
-    font-size: 1.5em;
-    margin: 10px 0;
+.plan.expandido {
+    height: auto;
+    background-color: #424141;
+}
+
+.plan.expandido .info-completa {
+    display: block;
 }
 
 .plan p {
     font-size: 1em;
     color: #ccc;
+}
+
+@media (max-width: 768px) {
+    .plan {
+        flex: 1 1 100%;
+        max-width: 100%;
+        height: auto;
+        cursor: default;
+    }
+
+    .plan .info-completa {
+        display: block;
+    }
+
+    .plan.expandido {
+        height: auto;
+    }
+
+    .plan:hover {
+        transform: none;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    }
 }
 
 footer {
@@ -307,6 +360,7 @@ footer {
     margin-top: 20px;
     font-size: 0.8em;
     margin-bottom: 15px;
+    max-height: 80px;
 }
 
 .social-icons a {
@@ -364,28 +418,48 @@ footer {
 
 .contact-options {
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
-    margin-bottom: 30px;
+    justify-content: center;
     gap: 20px;
+    padding: 50px 20px;
+    color: white;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contact-options h1 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    width: 100%;
+    text-align: center;
+}
+
+.contact-options p {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
 }
 
 .contact-method {
-    flex-basis: calc(33% - 20px);
-    max-width: 300px; 
-    flex: 1;
+    flex: 1 1 300px;
+    max-width: 300px;
     text-align: center;
-    padding: 20px;
-    border: 1px solid #555;
-    border-radius: 10px;
     background-color: #444;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #555;
+    cursor: pointer;
+    overflow: hidden;
+    height: auto;
+    position: relative;
     color: #fff;
-    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .contact-method:hover {
-    transform: scale(1.05);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7);
 }
 
 .contact-method i {
@@ -407,6 +481,26 @@ footer {
 
 .contact-method a:hover {
     color: #f00;
+}
+
+@media (max-width: 768px) {
+    .contact-method {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+
+    .contact-method a {
+        color: #f00;
+    }
+
+    .contact-method a:hover {
+        color: #f00;
+    }
+
+    .contact-method:hover {
+        transform: none;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    }
 }
 
 .faq {
@@ -876,33 +970,385 @@ body.loaded #content {
     }
 }
 
-/* Estilo base para los planes */
-.plan {
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 20px;
-    margin: 10px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    overflow: hidden;
-    height: 150px; /* Altura inicial */
+.nuestra_empresa {
+    background-color: white;
+    padding: 0;
     position: relative;
+    overflow: hidden;
+    border-top: 5px solid red;
 }
 
-.plan h2, .plan .precio, .plan .info-corta {
+.empresa-contenedor {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    max-width: 100%;
+    height: 500px;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.empresa-contenedor.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.empresa-imagen-izquierda {
+    flex: 1;
+    overflow: hidden;
+    transform: translateX(-100%);
+    transition: transform 1s ease-out;
+}
+
+.empresa-contenedor.visible .empresa-imagen-izquierda {
+    transform: translateX(0);
+}
+
+.empresa-imagen-izquierda img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.empresa-contenido-derecha {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: white;
+    position: relative;
+    padding: 0;
+    transform: translateX(100%);
+    transition: transform 1s ease-out;
+}
+
+.empresa-contenedor.visible .empresa-contenido-derecha {
+    transform: translateX(0);
+}
+
+.empresa-texto {
+    background: white;
+    padding: 20px;
+    z-index: 2;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.empresa-texto h2 {
+    font-size: 1.8em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.empresa-texto p {
+    font-size: 1em;
+    color: #666;
+    line-height: 1.6;
+}
+
+.empresa-imagen-derecha {
+    height: 50%;
+    overflow: hidden;
+}
+
+.empresa-imagen-derecha img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .empresa-imagen-izquierda {
+        display: none;
+    }
+
+    .empresa-contenido-derecha {
+        flex: 1 1 100%;
+    }
+
+    .empresa-texto {
+        height: auto;
+        text-align: center;
+    }
+
+    .empresa-imagen-derecha {
+        height: auto;
+    }
+}
+
+.nosotros-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1000px;
+    margin: 50px auto;
+    gap: 30px;
+    overflow: hidden;
+    padding: 20px;
+  }
+  
+#nosotros-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.texto-info-nosotros {
+    flex: 1;
+    color: #fff;
+    font-size: 1.1rem;
+}
+
+.imagen-info-nosotros {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.imagen-info-nosotros img {
+    max-width: 300px;
+    border-radius: 10px;
+    transition: transform 0.8s ease-out, opacity 0.8s ease-out;
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+.imagen-info-nosotros.visible img {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.bloques-nosotros {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.bloque {
+    background-color: #444;
+    padding: 10px;
+    border-radius: 8px;
+    flex: 1 1 calc(33% - 40px);
+    max-width: 400px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.bloque:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+}
+
+.bloque h3 {
+    margin-bottom: 10px;
+    color: #f00;
+}
+
+.bloque p {
+    font-size: 0.9em;
+    line-height: 1.4;
+    color: #ccc;
+}
+
+.bloque.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+    .bloques-nosotros {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .bloque {
+        width: 90%;
+    }
+
+    #nosotros-info {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .imagen-info-nosotros {
+        order: 2;
+        margin-top: 20px;
+    }
+}
+
+.rastreo-seccion-principal {
+    padding: 20px;
+  }
+  
+.rastreo-seccion-principal h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+  }
+
+.rastreo-lista-planes {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.rastreo-tarjeta-plan {
+    background-color: #222;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s;
+    flex: 1 1 calc(33.33% - 10px);
+    max-width: 400px;
+    min-width: 250px;
+  }
+  
+  .rastreo-tarjeta-plan:hover {
+    transform: scale(1.05);
+  }
+  
+  .rastreo-tarjeta-plan img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  .rastreo-tarjeta-plan h2 {
     margin: 10px 0;
-}
-
-.plan .info-completa {
-    display: none; /* Oculto por defecto */
+    font-size: 1.5em;
+  }
+  
+  .rastreo-tarjeta-plan p {
+    font-size: 1em;
+    margin: 5px 0;
+  }
+  
+  .rastreo-tarjeta-plan .rastreo-precio {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #ffffff;
+  }
+  
+  .rastreo-tarjeta-plan button {
+    background-color: #ff0000;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
     margin-top: 10px;
+  }
+  
+  .rastreo-tarjeta-plan button:hover {
+    background-color: #ff2323;
+  }
+
+  .rastreo-ventana {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
 }
 
-.plan.expandido {
-    height: auto; /* Ajusta la altura automáticamente */
-    background-color: #f9f9f9;
+.rastreo-contenido-ventana {
+    background-color: #333;
+    width: 90%;
+    max-width: 600px;
+    height: 80vh;
+    border-radius: 10px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow: hidden;
 }
 
-.plan.expandido .info-completa {
-    display: block; /* Muestra la información completa */
+.rastreo-contenido-ventana h2 {
+    font-size: 1.5em;
+    color: white;
+    margin-bottom: 10px;
+    text-align: center;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
+
+.rastreo-contenido-ventana img {
+    width: 100%;
+    max-height: 35%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.rastreo-descripcion {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding: 10px;
+    color: white;
+    text-align: justify;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    max-height: 40vh;
+}
+
+.rastreo-cerrar {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 2em;
+    cursor: pointer;
+    color: white;
+}
+
+#rastreo-descripcion-ventana {
+    max-height: 300px;
+    overflow-y: auto;
+    padding: 10px;
+    color: white;
+    text-align: left;
+}
+
+@media (min-width: 769px) {
+  .rastreo-tarjeta-plan:hover {
+    transform: scale(1.05);
+  }
+
+  .rastreo-contenido-ventana {
+    max-height: 80vh;
+    overflow-y: auto;
+  }
+}
+
+.rastreo-contenido-ventana::after {
+    content: "⬇ Desliza para ver más";
+    display: block;
+    font-size: 0.9em;
+    color: #bbb;
+    text-align: center;
+    margin-top: 10px;
+    animation: parpadeo 1.5s infinite;
+}
+
+@keyframes parpadeo {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+}
+
